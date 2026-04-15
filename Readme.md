@@ -2,6 +2,7 @@
 
 * Студент: [Эльвира Шакирова](https://up.htmlacademy.ru/htmlcss-individual/3/user/2704581).
 * Наставник: [Александр Козюков](https://htmlacademy.ru/profile/id1119885).
+* Мой проект: [Ссылка на сайт](https://elvishakirova.github.io/2704581-sedona-3/).
 
 ---
 
