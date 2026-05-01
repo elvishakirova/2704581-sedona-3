@@ -15,9 +15,15 @@
         <li class="navigation-item">
           <img class="navigation-item-image" src="#" alt="Логотип города">
         </li>
-        <li class="navigation-item"><a class="navigation-link" href="/">Главная</a></li>
-        <li class="navigation-item"><a class="navigation-link" href="#">О Седоне</a></li>
-        <li class="navigation-item"><a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a></li>
+        <li class="navigation-item">
+          <a class="navigation-link" href="/">Главная</a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link" href="#">О Седоне</a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a>
+        </li>
       </ul>
       <ul class="navigation-list navigation-user">
         <li class="navigation-item">
@@ -31,53 +37,80 @@
             <span class="icon-button-counter">12</span>
           </a>
         </li>
-        <li class="navigation-item"><a class="navigation-link" href="#">Хочу сюда!</a></li>
+        <li class="navigation-item">
+          <a class="navigation-link" href="#">Хочу сюда!</a>
+        </li>
       </ul>
     </nav>
   </header>
 
-  <main class="main-index">
+  <main class="main-inner">
+    <header class="inner-header">
+      <h1 class="inner-header-title">Гостиницы Седоны</h1>
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs-item">
+          <a class="breadcrumbs-link" href="/">Главная</a>
+        </li>
+        <li class="breadcrumbs-item">
+          <a class="breadcrumbs-link" href="catalog.html">Гостиницы</a>
+        </li>
+      </ul>
+    </header>
 
-
-
-    <footer class="page-footer">
-      <div class="socials">
-        <h2 class="visually-hidden">Социальные сети</h2>
-        <ul class="footer-social-list">
-          <li class="footer-social-item">
-            <a class="footer-social-link" target="_blank" rel="noreferrer noopener" href="https://vk.com/htmlacademy">
-              <span class="visually-hidden">VKontakte</span>
-            </a>
-          </li>
-          <li class="footer-social-item">
-            <a class="footer-social-link" target="_blank" rel="noreferrer noopener" href="https://t.me/htmlacademy">
-              <span class="visually-hidden">Telegram</span>
-            </a>
-          </li>
-          <li class="footer-social-item">
-            <a class="footer-social-link" target="_blank" rel="noreferrer noopener"
-              href="https://www.youtube.com/user/htmlacademyru">
-              <span class="visually-hidden">Youtube</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="footer-contacts">
-        <h2 class="visually-hidden">Номер телефона</h2>
-        <a class="footer-phone-link" href="tel:+78128121212">+7 (812) 812-12-12</a>
-      </div>
-
-      <div class="footer-logo">
-        <a class="footer-logo-link" target="_blank" rel="noreferrer noopener"
-          href="https://htmlacademy.ru/intensive/htmlcss">
-          <img class="footer-logo-image" src="#" alt="Логотип HTML Академии">
-        </a>
-      </div>
-
-    </footer>
-
+    <section class="catalog-products">
+      <h2 class="visually-hidden">Список фильтров гостиниц Седоны</h2>
+      <form class="catalog-filters" action="https://echo.htmlacademy.ru/" method="get">
+        <fieldset class="catalog-filter-group">
+          <legend class="catalog-filter-title">Инфраструктуры:</legend>
+        </fieldset>
+        <fieldset class="catalog-filter-group">
+          <legend class="catalog-filter-title">Тип жилья:</legend>
+        </fieldset>
+        <fieldset class="catalog-filter-group">
+          <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+        </fieldset>
+        <button class="button" type="submit">Применить</button>
+        <button class="button" type="submit">Сбросить</button>
+      </form>
+    </section>
   </main>
+
+  <footer class="page-footer">
+    <div class="socials">
+      <h2 class="visually-hidden">Социальные сети</h2>
+      <ul class="footer-social-list">
+        <li class="footer-social-item">
+          <a class="footer-social-link" target="_blank" rel="noreferrer noopener" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">VKontakte</span>
+          </a>
+        </li>
+        <li class="footer-social-item">
+          <a class="footer-social-link" target="_blank" rel="noreferrer noopener" href="https://t.me/htmlacademy">
+            <span class="visually-hidden">Telegram</span>
+          </a>
+        </li>
+        <li class="footer-social-item">
+          <a class="footer-social-link" target="_blank" rel="noreferrer noopener"
+            href="https://www.youtube.com/user/htmlacademyru">
+            <span class="visually-hidden">Youtube</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-contacts">
+      <h2 class="visually-hidden">Номер телефона</h2>
+      <a class="footer-phone-link" href="tel:+78128121212">+7 (812) 812-12-12</a>
+    </div>
+
+    <div class="footer-logo">
+      <a class="footer-logo-link" target="_blank" rel="noreferrer noopener"
+        href="https://htmlacademy.ru/intensive/htmlcss">
+        <img class="footer-logo-image" src="#" alt="Логотип HTML Академии">
+      </a>
+    </div>
+
+  </footer>
 
 </body>
 
