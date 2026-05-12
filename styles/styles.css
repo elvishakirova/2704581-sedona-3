@@ -357,13 +357,18 @@ li {
   background-position: center;
 }
 
-.inner-header {
+.catalog-hero {
   background-color: lightgray;
   display: block;
   background-image: url("../images/catalog-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   height: 412px;
+}
+
+.catalog-filters {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .inner-header-title {
