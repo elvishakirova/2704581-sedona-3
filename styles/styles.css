@@ -92,8 +92,6 @@ li {
 }
 
 .icon-button-counter {
-  top: -8px;
-  right: -16px;
   display: block;
   width: 20px;
   height: 20px;
@@ -572,4 +570,16 @@ fieldset.catalog-filter-group {
 .more {
   background-color: transparent;
   color: #000;
+}
+
+.vibrant-blue {
+  background-color: #82B3D3;
+}
+
+.blue {
+  background-color: #83B3D333;
+}
+
+.light-blue {
+  background-color: #83B3D31F;
 }
