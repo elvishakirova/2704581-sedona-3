@@ -3,7 +3,7 @@
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/ptsans-400.woff2") format("woff2");
-  display: swap;
+  font-display: swap;
 }
 
 @font-face {
@@ -11,37 +11,22 @@
   font-style: normal;
   font-weight: 700;
   src: url("../fonts/ptsans-700.woff2") format("woff2");
-  display: swap;
+  font-display: swap;
 }
-
-@font-face {
-  font-family: "Pt Sans";
-  font-style: italic;
-  font-weight: 400;
-  src: url("../fonts/ptsans-400.woff2") format("woff2");
-  display: swap;
-}
-
-@font-face {
-  font-family: "Pt Sans";
-  font-style: italic;
-  font-weight: 700;
-  src: url("../fonts/ptsans-700.woff2") format("woff2");
-  display: swap;
-}
-
 
 body {
   font-family: "Pt Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   background-color: #fff;
-  color: #000;
+  color: #333333;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
-.button, button {
+.button {
+  font-family: "Pt Sans", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   border-radius: 4px;
@@ -59,8 +44,23 @@ li {
   display: none;
 }
 
+.section-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.section-subtitle {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+}
+
 .page-header {
-  background-color: #fff;
   color: #000;
 }
 
@@ -70,7 +70,6 @@ li {
   font-weight: 700;
   text-decoration: none;
   color: #000;
-  text-align: center;
 }
 
 .search {
@@ -99,11 +98,11 @@ li {
   color: #fff;
   font-size: 10px;
   line-height: 10px;
-  font-weight: 400;
   border-radius: 50%;
 }
 
 .primary-button-small {
+  font-family: "Pt Sans", sans-serif;
   background-color: #756157;
   color: #fff;
   font-size: 16px;
@@ -122,89 +121,28 @@ li {
   background-position: center bottom, center center;
 }
 
-.about-title {
-  font-size: 30px;
-  line-height: 36px;
-  font-weight: 700;
-  color: #000;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.about-description {
-  font-size: 22px;
-  line-height: 26px;
-  font-weight: 400;
-  color: #333333;
-  text-align: center;
-}
-
 .advantages-item-title {
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
-  color: #000;
-  text-align: center;
+  color: #ffffff;
   text-transform: uppercase;
 }
 
 .advantages-item-description {
   font-size: 18px;
   line-height: 21px;
-  font-weight: 400;
-  color: #333333;
-  text-align: center;
 }
 
-.advantages-list li:first-child h3, .advantages-list li:last-child h3 {
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: 700;
-  color: #fff;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.advantages-list li:first-child p, .advantages-list li:last-child p {
+.advantages-item-description-white {
   font-size: 18px;
   line-height: 21px;
-  font-weight: 400;
-  color: #fff;
-  text-align: center;
-}
-
-.recommendations-title {
-  font-size: 30px;
-  line-height: 36px;
-  font-weight: 700;
-  color: #000;
-  text-align: center;
-  text-transform: uppercase;
+  color: #ffffff;
 }
 
 .recommendations-description {
   font-size: 22px;
   line-height: 26px;
-  font-weight: 400;
-  color: #333333;
-  text-align: center;
-}
-
-.recommendations-item-title {
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: 700;
-  color: #000;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.recommendations-item-description {
-  font-size: 18px;
-  line-height: 21px;
-  font-weight: 400;
-  color: #333333;
-  text-align: center;
 }
 
 .recommendations-item:nth-child(1) .recommendations-item-title::before {
@@ -248,7 +186,6 @@ li {
   line-height: 36px;
   font-weight: 700;
   color: #000;
-  text-align: center;
   text-transform: uppercase;
 }
 
@@ -256,8 +193,6 @@ li {
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
-  color: #333333;
-  text-align: center;
 }
 
 .primary-button-large {
@@ -269,7 +204,6 @@ li {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  text-align: center;
   border: none
 }
 
@@ -277,17 +211,14 @@ li {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
-  color: #000;
-  text-align: center;
+  color: #fff;
   text-transform: uppercase;
 }
 
 .subscription-description {
   font-size: 22px;
   line-height: 26px;
-  font-weight: 400;
-  color: #333333;
-  text-align: center;
+  color: #fff;
 }
 
 .subscription {
@@ -342,9 +273,7 @@ li {
 .footer-phone-link {
   font-size: 40px;
   line-height: 40px;
-  font-weight: 400;
   color: #000;
-  text-align: center;
   text-decoration: none;
 }
 
@@ -440,14 +369,6 @@ fieldset.catalog-filter-group {
   padding-left: 50px;
 }
 
-.catalog-header {
-  font-size: 30px;
-  line-height: 36px;
-  font-weight: 700;
-  color: #000;
-  text-transform: uppercase;
-}
-
 .control-control {
   border: 2px solid #E5E5E5;
   border-radius: 4px;
@@ -505,14 +426,6 @@ fieldset.catalog-filter-group {
   text-decoration: none;
 }
 
-.product-card-category, .product-card-price {
-  font-size: 18px;
-  line-height: 21px;
-  font-weight: 400;
-  color: #333333;
-  text-align: left, right;
-}
-
 .product-card-button {
   background-color: #7DB54F;
   color: #fff;
@@ -524,30 +437,24 @@ fieldset.catalog-filter-group {
 
 .product-card-rating {
   background-color: #F2F2F2;
-  color: #333333;
   border-radius: 4px;
   font-size: 16px;
   line-height: 20px;
-  font-weight: 400;
   text-transform: uppercase;
-  padding: 9px 22px 8px 23px;
+  padding: 8px 22px 8px 23px;
 }
 
-.subscription-title-white {
+.subscription-title-black {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   color: #000;
-  text-align: center;
   text-transform: uppercase;
 }
 
-.subscription-description-white {
+.subscription-description-black {
   font-size: 22px;
   line-height: 26px;
-  font-weight: 400;
-  color: #333333;
-  text-align: center;
 }
 
 .pagination-link {
@@ -577,14 +484,14 @@ fieldset.catalog-filter-group {
   color: #000;
 }
 
-.vibrant-blue {
+.vibrant-blue-background {
   background-color: #82B3D3;
 }
 
-.blue {
+.blue-background {
   background-color: #83B3D333;
 }
 
-.light-blue {
+.light-blue-background {
   background-color: #83B3D31F;
 }
