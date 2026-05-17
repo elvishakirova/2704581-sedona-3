@@ -20,6 +20,31 @@ body {
   line-height: 21px;
   background-color: #ffffff;
   color: #333333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0px;
+}
+
+html {
+  height: 100%;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.main-container {
+  flex-grow: 1;
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main-container-catalog {
+  flex-grow: 1;
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .button {
@@ -61,12 +86,38 @@ li {
   color: #000000;
 }
 
+.navigation {
+  width: 1200px;
+  display: flex;
+  margin: 0 auto;
+  height: 64px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation-list {
+  margin: 0;
+  padding: 0px;
+  display: flex;
+}
+
 .navigation-link {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
   text-decoration: none;
   color: #000000;
+}
+
+.navigation-item {
+  padding: 0 16px;
+  align-content: center;
+}
+
+.nav-logo {
+  padding: 0px;
+  margin-right: 30px;
+  display: block;
 }
 
 .search {
@@ -116,6 +167,28 @@ li {
   background-size: 100% auto, 100% auto;
   background-repeat: no-repeat, no-repeat;
   background-position: center bottom, center center;
+  align-content: center;
+}
+
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.advantages-item {
+  width: 400px;
+  height: 385px;
+  align-content: center;
+}
+
+.advantages-item-with-image {
+  display: flex;
+  width: 1200px;
+}
+
+.advantages-item-content {
+  align-content: center;
 }
 
 .advantages-item-title {
@@ -140,6 +213,18 @@ li {
 .recommendations-description {
   font-size: 22px;
   line-height: 26px;
+}
+
+.recommendations-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.recommendations-item {
+  width: 400px;
+  height: 385px;
+  align-content: center;
 }
 
 .recommendations-item:nth-child(1) .recommendations-item-title::before {
@@ -212,6 +297,7 @@ li {
   background-color: lightgray;
   background-size: 100% auto;
   background-repeat: no-repeat;
+  align-content: center;
 }
 
 .secondary-button {
@@ -230,6 +316,12 @@ li {
 .page-footer {
   background-color: #ffffff;
   color: #000000;
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  margin: 0 auto;
+  height: 120px;
+  align-items: center;
 }
 
 .footer-social-link {
@@ -238,6 +330,12 @@ li {
   height: 40px;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.footer-social-list {
+  display: flex;
+  margin: 0;
+  padding: 0px;
 }
 
 .footer-social-item:nth-child(1) {
@@ -280,9 +378,19 @@ li {
   height: 412px;
 }
 
+.catalog {
+  display: flex;
+  flex-direction: column;
+}
+
 .catalog-filters {
   display: flex;
   flex-wrap: wrap;
+}
+
+.filters-section {
+  display: flex;
+  align-items: center;
 }
 
 .inner-header-title {
