@@ -18,11 +18,8 @@ body {
   font-family: "Pt Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
-  background-color: #fff;
+  background-color: #ffffff;
   color: #333333;
-  margin: 0;
-  padding: 0;
-  text-align: center;
 }
 
 .button {
@@ -48,7 +45,7 @@ li {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
-  color: #000;
+  color: #000000;
   text-transform: uppercase;
 }
 
@@ -56,12 +53,12 @@ li {
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
-  color: #000;
+  color: #000000;
   text-transform: uppercase;
 }
 
 .page-header {
-  color: #000;
+  color: #000000;
 }
 
 .navigation-link {
@@ -69,7 +66,7 @@ li {
   line-height: 24px;
   font-weight: 700;
   text-decoration: none;
-  color: #000;
+  color: #000000;
 }
 
 .search {
@@ -95,7 +92,7 @@ li {
   width: 20px;
   height: 20px;
   background-color: #7DB54F;
-  color: #fff;
+  color: #ffffff;
   font-size: 10px;
   line-height: 10px;
   border-radius: 50%;
@@ -104,7 +101,7 @@ li {
 .primary-button-small {
   font-family: "Pt Sans", sans-serif;
   background-color: #756157;
-  color: #fff;
+  color: #ffffff;
   font-size: 16px;
   line-height: 20px;
   text-decoration: none;
@@ -181,14 +178,6 @@ li {
   background-size: contain;
 }
 
-.hotel-search-title {
-  font-size: 30px;
-  line-height: 36px;
-  font-weight: 700;
-  color: #000;
-  text-transform: uppercase;
-}
-
 .hotel-search-description {
   font-size: 22px;
   line-height: 26px;
@@ -197,7 +186,7 @@ li {
 
 .primary-button-large {
   background-color: #756157;
-  color: #fff;
+  color: #ffffff;
   padding-right: 50px;
   padding-left: 50px;
   font-size: 20px;
@@ -208,17 +197,13 @@ li {
 }
 
 .subscription-title {
-  font-size: 30px;
-  line-height: 36px;
-  font-weight: 700;
-  color: #fff;
-  text-transform: uppercase;
+  color: #ffffff;
 }
 
 .subscription-description {
   font-size: 22px;
   line-height: 26px;
-  color: #fff;
+  color: #ffffff;
 }
 
 .subscription {
@@ -231,7 +216,7 @@ li {
 
 .secondary-button {
   background-color: #82B3D3;
-  color: #fff;
+  color: #ffffff;
   padding-right: 50px;
   padding-left: 50px;
   font-size: 20px;
@@ -243,8 +228,8 @@ li {
 }
 
 .page-footer {
-  background-color: #fff;
-  color: #000;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .footer-social-link {
@@ -273,7 +258,7 @@ li {
 .footer-phone-link {
   font-size: 40px;
   line-height: 40px;
-  color: #000;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -304,14 +289,14 @@ li {
   font-size: 60px;
   line-height: 70px;
   font-weight: 700;
-  color: #fff;
+  color: #ffffff;
 }
 
 .breadcrumbs-link {
   font-size: 16px;
   line-height: 21px;
   font-weight: 400;
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -337,14 +322,14 @@ li {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
-  color: #fff;
+  color: #ffffff;
 }
 
 .control {
   font-size: 18px;
   line-height: 23px;
   font-weight: 400;
-  color: #fff;
+  color: #ffffff;
 }
 
 fieldset.catalog-filter-group {
@@ -353,7 +338,7 @@ fieldset.catalog-filter-group {
 
 .secondary-button-small {
   background-color: #82B3D3;
-  color: #fff;
+  color: #ffffff;
   font-family: "Pt Sans", sans-serif;
   font-size: 16px;
   line-height: 20px;
@@ -362,7 +347,7 @@ fieldset.catalog-filter-group {
 
 .ghost-button {
   background-color: transparent;
-  color: #fff;
+  color: #ffffff;
   font-size: 16px;
   line-height: 20px;
   padding-right: 50px;
@@ -393,7 +378,7 @@ fieldset.catalog-filter-group {
 .sorting-button-tile {
   background-image: url("../images/tile-view.svg");
   display: block;
-  border: 2px solid #000;
+  border: 2px solid #000000;
 }
 
 .sorting-button-card {
@@ -422,13 +407,13 @@ fieldset.catalog-filter-group {
   font-size: 24px;
   line-height: 24px;
   font-weight: 700;
-  color: #000;
+  color: #000000;
   text-decoration: none;
 }
 
 .product-card-button {
   background-color: #7DB54F;
-  color: #fff;
+  color: #ffffff;
   font-size: 16px;
   line-height: 20px;
   padding-right: 50px;
@@ -448,7 +433,7 @@ fieldset.catalog-filter-group {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
-  color: #000;
+  color: #000000;
   text-transform: uppercase;
 }
 
@@ -464,7 +449,7 @@ fieldset.catalog-filter-group {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   width: 60px;
   height: 60px;
@@ -476,12 +461,12 @@ fieldset.catalog-filter-group {
 
 .pagination-current {
   background-color: #F2F2F2;
-  color: #000;
+  color: #000000;
 }
 
 .more {
   background-color: transparent;
-  color: #000;
+  color: #000000;
 }
 
 .vibrant-blue-background {
