@@ -309,14 +309,12 @@ li {
   background-color: lightgray;
   background-size: cover;
   background-repeat: no-repeat;
-  align-content: center;
+  text-align: center;
 }
 
 .secondary-button {
   background-color: #82B3D3;
   color: #ffffff;
-  padding-right: 50px;
-  padding-left: 50px;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
@@ -375,6 +373,10 @@ li {
   padding: 35px 70px 70px 70px;
 }
 
+.catalog-header {
+  margin: 0 5px 0 0;
+}
+
 .catalog {
   display: flex;
   flex-direction: column;
@@ -398,7 +400,7 @@ li {
   gap: 70px;
 }
 
-.catalog-fiter-range {
+.catalog-filter-range {
   padding-left: 0;
 }
 
@@ -413,6 +415,17 @@ li {
   display: flex;
   align-items: center;
   margin: 0 70px;
+  padding: 50px 0 40px;
+}
+
+.control-control {
+  margin-right: 70px;
+  margin-left: auto;
+}
+
+.sorting-buttons-container {
+  display: flex;
+  gap: 8px;
 }
 
 .inner-header-title {
@@ -472,7 +485,7 @@ fieldset.catalog-filter-group {
   font-family: "Pt Sans", sans-serif;
   font-size: 16px;
   line-height: 20px;
-  padding: 9px 50px 8px 50px;
+  padding: 8px 20px
 }
 
 .ghost-button {
@@ -526,11 +539,15 @@ fieldset.catalog-filter-group {
 .product-list {
   display: flex;
   flex-wrap: wrap;
+  gap: 20px;
   padding: 0;
-  justify-content: space-between;
   margin: 0 70px;
   padding-bottom: 40px;
   border-bottom: #E6E6E6 1px solid;
+}
+
+.product-item {
+  width: calc((100% - 40px)/3);
 }
 
 .product-card {
@@ -551,11 +568,16 @@ fieldset.catalog-filter-group {
 }
 
 .product-card-title {
+  margin: 16px 0 0 0;
   font-size: 24px;
   line-height: 24px;
   font-weight: 700;
   color: #000000;
   text-decoration: none;
+}
+
+.product-card-category {
+  margin: 0;
 }
 
 .product-card-button {
@@ -569,7 +591,7 @@ fieldset.catalog-filter-group {
 .product-card-button-favourite {
   background-color: #7DB54F;
   margin: 0;
-  padding: 8px 20px;
+  padding: 8px 18px;
 }
 
 .product-card-rating {
