@@ -29,7 +29,7 @@ body {
 }
 
 html {
-  height: 100%;
+  min-height: 100%;
   background-color: #F2F2F2;
 }
 
@@ -37,7 +37,12 @@ img {
   vertical-align: middle;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .main-container {
+  height: 100%;
   flex-grow: 1;
   margin: 0 auto;
   text-align: center;
@@ -46,6 +51,7 @@ img {
 .main-container-catalog {
   flex-grow: 1;
   margin: 0 auto;
+  height: 100%;
 }
 
 .button {
@@ -54,17 +60,19 @@ img {
   text-transform: uppercase;
   border-radius: 4px;
   cursor: pointer;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding: 8px 0;
   border: none;
 }
 
-li {
-  list-style: none;
-}
-
 .visually-hidden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .section-title {
@@ -73,6 +81,7 @@ li {
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .section-subtitle {
@@ -81,6 +90,7 @@ li {
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .page-header {
@@ -94,13 +104,30 @@ li {
   justify-content: space-between;
 }
 
+.nav-logo {
+  margin-right: 30px;
+}
+
 .navigation-list {
+  list-style: none;
   margin: 0;
   padding: 0px;
   display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.navigation-user {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  margin: 0;
 }
 
 .navigation-link {
+  display: inline-block;
+  padding: 20px 16px;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
@@ -108,9 +135,11 @@ li {
   color: #000000;
 }
 
-.navigation-item {
-  padding: 0 16px;
-  align-content: center;
+.navigation-user-link {
+  display: inline-block;
+  padding: 22px 12px;
+  min-width: 44px;
+  text-decoration: none;
 }
 
 .search {
@@ -160,16 +189,21 @@ li {
   background-repeat: no-repeat, no-repeat;
   background-position: center bottom, center center;
   align-content: center;
-  padding-top: 50px;
-  padding-bottom: 82px;
+  padding: 50px 0 82px;
 }
 
 .about {
-  padding-top: 69px;
-  padding-bottom: 90px;
+  padding: 69px 0 90px;
+}
+
+.about-title {
+  max-width: 620px;
+  margin: 0 auto;
 }
 
 .advantages-list {
+  margin: 0;
+  list-style: none;
   display: flex;
   flex-wrap: wrap;
   padding: 0;
@@ -179,6 +213,7 @@ li {
   width: 400px;
   height: 385px;
   align-content: center;
+  padding: 0 85px;
 }
 
 .advantages-item-with-image {
@@ -188,6 +223,7 @@ li {
 
 .advantages-item-content {
   align-content: center;
+  padding: 0 85px;
 }
 
 .advantages-item-title {
@@ -210,8 +246,12 @@ li {
 }
 
 .recommendations-header {
-  padding-top: 64px;
-  padding-bottom: 64px;
+  padding: 64px 0;
+}
+
+.recommendations-title {
+  max-width: 505px;
+  margin: 0 auto;
 }
 
 .recommendations-description {
@@ -220,13 +260,15 @@ li {
 }
 
 .recommendations-list {
+  list-style: none;
   display: flex;
   flex-wrap: wrap;
   padding: 0;
+  margin: 0;
 }
 
 .recommendations-item {
-  padding: 81px 0;
+  padding: 81px 85px;
   align-content: center;
   width: 33.33%;
 }
@@ -268,8 +310,7 @@ li {
 }
 
 .hotel-search {
-  padding-top: 96px;
-  padding-bottom: 96px;
+  padding: 96px 0;
   max-width: 592px;
   margin: 0 auto;
 }
@@ -283,8 +324,7 @@ li {
 .primary-button-large {
   background-color: #756157;
   color: #ffffff;
-  padding-right: 50px;
-  padding-left: 50px;
+  padding: 0 50px;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
@@ -300,12 +340,13 @@ li {
   font-size: 22px;
   line-height: 26px;
   color: #ffffff;
+  max-width: 475px;
+  margin: 20px auto 50px;
 }
 
 .subscription {
   background-image: url("../images/subscription-background.jpg");
-  padding-top: 96px;
-  padding-bottom: 104px;
+  padding: 96px 0 104px;
   background-color: lightgray;
   background-size: cover;
   background-repeat: no-repeat;
@@ -330,8 +371,7 @@ li {
   justify-content: space-between;
   margin: 0 70px;
   align-items: center;
-  padding-top: 40px;
-  padding-bottom: 30px;
+  padding: 40px 0 30px;
 }
 
 .footer-social-link {
@@ -343,7 +383,9 @@ li {
 }
 
 .footer-social-list {
+  list-style: none;
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0px;
 }
@@ -370,7 +412,7 @@ li {
   background-image: url("../images/catalog-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 35px 70px 70px 70px;
+  padding: 35px 70px 70px;
 }
 
 .catalog-header {
@@ -402,6 +444,7 @@ li {
 
 .catalog-filter-range {
   padding-left: 0;
+  list-style: none;
 }
 
 .catalog-filter-button-container {
@@ -440,6 +483,7 @@ li {
   padding-left: 0;
   gap: 10px;
   align-items: center;
+  list-style: none;
 }
 
 .breadcrumbs-link {
@@ -466,6 +510,7 @@ li {
 
 .catalog-filter-list {
   padding-left: 0;
+  list-style: none;
 }
 
 .control {
@@ -493,8 +538,7 @@ fieldset.catalog-filter-group {
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
-  padding-right: 50px;
-  padding-left: 50px;
+  padding: 0 50px;
 }
 
 .control-control {
@@ -531,6 +575,7 @@ fieldset.catalog-filter-group {
 }
 
 .sorting-button-list {
+  list-style: none;
   background-image: url("../images/list-view.svg");
   display: block;
   border: 2px solid #E5E5E5;
@@ -540,10 +585,10 @@ fieldset.catalog-filter-group {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 0;
+  padding: 0 0 40px;
   margin: 0 70px;
-  padding-bottom: 40px;
   border-bottom: #E6E6E6 1px solid;
+  list-style: none;
 }
 
 .product-item {
@@ -568,7 +613,7 @@ fieldset.catalog-filter-group {
 }
 
 .product-card-title {
-  margin: 16px 0 0 0;
+  margin: 16px 0 0;
   font-size: 24px;
   line-height: 24px;
   font-weight: 700;
@@ -600,8 +645,13 @@ fieldset.catalog-filter-group {
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-  padding: 8px 22px 8px 22px;
+  padding: 8px 22px;
   margin: 0;
+}
+
+.product-card-image {
+  width: 100%;
+  height: auto;
 }
 
 .hotel-stars {
@@ -609,6 +659,7 @@ fieldset.catalog-filter-group {
   grid-area: 6px;
   padding-left: 0;
   align-items: center;
+  list-style: none;
 }
 
 .hotel-class {
@@ -620,16 +671,16 @@ fieldset.catalog-filter-group {
 
 .pagination {
   display: flex;
-  padding: 40px 0 60px 0;
+  padding: 40px 0 60px;
   gap: 8px;
   margin: 0 70px;
+  list-style: none;
 }
 
 .subscription-background-black {
   margin: 0 auto;
   text-align: center;
-  padding-top: 96px;
-  padding-bottom: 104px;
+  padding: 96px 0 104px;
 }
 
 .subscription-title-black {
@@ -643,6 +694,8 @@ fieldset.catalog-filter-group {
 .subscription-description-black {
   font-size: 22px;
   line-height: 26px;
+  max-width: 475px;
+  margin: 20px auto 50px;
 }
 
 .pagination-link {

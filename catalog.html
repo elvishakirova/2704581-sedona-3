@@ -12,12 +12,10 @@
 <body>
   <header class="page-header">
     <nav class="navigation">
+      <a class="nav-logo" href="index.html">
+        <img class="navigation-item-image" src="images/logo.svg" width="140" height="70" alt="Логотип города">
+      </a>
       <ul class="navigation-list">
-        <li class="navigation-item">
-          <a class="navigation-link" href="/">
-            <img class="navigation-item-image" src="images/logo.svg" width="140" height="70" alt="Логотип города">
-          </a>
-        </li>
         <li class="navigation-item">
           <a class="navigation-link" href="index.html">Главная</a>
         </li>
@@ -28,20 +26,20 @@
           <a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a>
         </li>
       </ul>
-      <ul class="navigation-list navigation-user">
-        <li class="navigation-item">
-          <a class="navigation-link search" href="#">
+      <ul class="navigation-user">
+        <li class="navigation-user-item">
+          <a class="navigation-user-link search" href="#">
             <span class="visually-hidden">Поиск</span>
           </a>
         </li>
-        <li class="navigation-item">
-          <a class="navigation-link favourite" href="#">
+        <li class="navigation-user-item">
+          <a class="navigation-user-link favourite" href="#">
             <span class="visually-hidden">Избранное</span>
             <span class="icon-button-counter">12</span>
           </a>
         </li>
-        <li class="navigation-item">
-          <a class="navigation-link button primary-button-small" href="#">Хочу сюда!</a>
+        <li class="navigation-user-item">
+          <a class="navigation-user-link button primary-button-small" href="#">Хочу сюда!</a>
         </li>
       </ul>
     </nav>
@@ -62,12 +60,6 @@
               </svg>
             </a>
           </li>
-          <li class="breadcrumbs-item">
-            <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M6.11167 4.4375L1.36167 0.1875C1.11167 -0.0625 0.611674 -0.0625 0.236674 0.1875C-0.138326 0.4375 -0.0133261 0.9375 0.236674 1.1875L4.36167 4.9375L0.361674 8.6875C0.111674 8.9375 0.111674 9.4375 0.361674 9.6875C0.361674 9.8125 0.736674 9.9375 0.861674 9.9375C0.986674 9.9375 1.23667 9.8125 1.36167 9.6875L6.11167 5.4375C6.48667 5.1875 6.48667 4.6875 6.11167 4.4375Z"
-                fill="white" />
-            </svg>
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="catalog.html">Гостиницы</a>
           </li>
@@ -118,7 +110,7 @@
           <div class="catalog-filter-right-group">
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-              <ul class="catalog-fiter-range">
+              <ul class="catalog-filter-range">
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="control-input" type="number" name="minimum-price" value="0" step="1000">
