@@ -59,7 +59,7 @@ img {
   text-transform: uppercase;
   border-radius: 4px;
   cursor: pointer;
-  padding: 8px 0;
+  padding: 8px 50px;
   border: none;
 }
 
@@ -122,6 +122,7 @@ img {
   align-items: center;
   list-style: none;
   margin: 0;
+  padding-left: 0;
 }
 
 .navigation-link {
@@ -178,8 +179,7 @@ img {
   font-size: 16px;
   line-height: 20px;
   text-decoration: none;
-  padding-right: 50px;
-  padding-left: 50px;
+  padding: 8px 34px;
 }
 
 .hero {
@@ -193,14 +193,16 @@ img {
 }
 
 .about {
-  padding: 69px 0 90px;
+  padding: 69px 200px 90px;
 }
 
 .about-title {
-  max-width: 620px;
-  margin: 0 auto;
+  margin: 0 auto 25px;
 }
 
+.about-description {
+  margin: 0;
+}
 .advantages-list {
   margin: 0;
   list-style: none;
@@ -213,7 +215,7 @@ img {
   max-width: 400px;
   min-height: 385px;
   align-content: center;
-  padding: 0 85px;
+  padding: 102px 85px;
 }
 
 .advantages-item-with-image {
@@ -223,10 +225,10 @@ img {
 
 .advantages-item-content {
   align-content: center;
-  padding: 0 85px;
+  padding: 102px 85px;
 }
 
-.advantages-item-title {
+.advantages-item-title-white {
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
@@ -234,29 +236,40 @@ img {
   text-transform: uppercase;
 }
 
+.advantages-item-title, .advantages-item-title-white {
+  margin-bottom: 30px;
+}
+
 .advantages-item-description {
   font-size: 18px;
   line-height: 21px;
+  margin: 0;
 }
 
 .advantages-item-description-white {
   font-size: 18px;
   line-height: 21px;
   color: #ffffff;
+  margin: 0;
+}
+
+.advantages-item-image {
+  height: 100%;
+  object-fit: cover;
 }
 
 .recommendations-header {
-  padding: 64px 0;
+  margin: 64px 200px;
 }
 
 .recommendations-title {
-  max-width: 505px;
-  margin: 0 auto;
+  margin: 0 auto 20px;
 }
 
 .recommendations-description {
   font-size: 22px;
   line-height: 26px;
+  margin: 0;
 }
 
 .recommendations-list {
@@ -271,6 +284,14 @@ img {
   padding: 81px 85px;
   align-content: center;
   width: 33.33%;
+}
+
+.recommendations-item-title {
+  margin-bottom: 30px;
+}
+
+.recommendations-item-description {
+  margin: 0;
 }
 
 .recommendations-item:nth-child(1) .recommendations-item-title::before {
@@ -311,14 +332,18 @@ img {
 
 .hotel-search {
   padding: 96px 0;
-  max-width: 592px;
-  margin: 0 auto;
+  margin: 0 200px;
+}
+
+.hotel-search-title {
+  margin-bottom: 20px;
 }
 
 .hotel-search-description {
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
+  margin-bottom: 54px;
 }
 
 .primary-button-large {
@@ -334,19 +359,19 @@ img {
 
 .subscription-title {
   color: #ffffff;
+  margin-bottom: 20px;
 }
 
 .subscription-description {
   font-size: 22px;
   line-height: 26px;
   color: #ffffff;
-  max-width: 475px;
-  margin: 20px auto 50px;
+  margin: 0 auto 54px;
 }
 
 .subscription {
   background-image: url("../images/subscription-background.jpg");
-  padding: 96px 0 104px;
+  padding: 96px 200px 104px;
   background-color: lightgray;
   background-size: cover;
   background-repeat: no-repeat;
@@ -445,6 +470,7 @@ img {
 .catalog-filter-range {
   padding-left: 0;
   list-style: none;
+  margin: 0;
 }
 
 .catalog-filter-button-container {
@@ -468,7 +494,10 @@ img {
 
 .sorting-buttons-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   gap: 8px;
+  max-width: 200px;
 }
 
 .inner-header-title {
@@ -476,6 +505,7 @@ img {
   line-height: 70px;
   font-weight: 700;
   color: #ffffff;
+  margin: 0 0 8px;
 }
 
 .breadcrumbs {
@@ -484,6 +514,7 @@ img {
   gap: 10px;
   align-items: center;
   list-style: none;
+  margin: 0 0 40px;
 }
 
 .breadcrumbs-link {
@@ -501,6 +532,8 @@ img {
   line-height: 24px;
   font-weight: 700;
   color: #ffffff;
+  padding: 0;
+  margin-bottom: 32px;
 }
 
 .catalog-filter-group {
@@ -509,8 +542,12 @@ img {
 }
 
 .catalog-filter-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   padding-left: 0;
   list-style: none;
+  margin: 0;
 }
 
 .control {
@@ -538,7 +575,7 @@ fieldset.catalog-filter-group {
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
-  padding: 0 50px;
+  padding: 8px 50px;
 }
 
 .control-control {
@@ -680,7 +717,7 @@ fieldset.catalog-filter-group {
 .subscription-background-black {
   margin: 0 auto;
   text-align: center;
-  padding: 96px 0 104px;
+  padding: 96px 200px 104px;
 }
 
 .subscription-title-black {
@@ -689,13 +726,18 @@ fieldset.catalog-filter-group {
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .subscription-description-black {
   font-size: 22px;
   line-height: 26px;
-  max-width: 475px;
-  margin: 20px auto 50px;
+  margin: 0 auto 50px;
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .pagination-link {
