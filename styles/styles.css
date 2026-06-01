@@ -61,6 +61,7 @@ img {
   cursor: pointer;
   padding: 8px 50px;
   border: none;
+  white-space: nowrap;
 }
 
 .visually-hidden {
@@ -180,6 +181,7 @@ img {
   line-height: 20px;
   text-decoration: none;
   padding: 8px 34px;
+  white-space: nowrap;
 }
 
 .hero {
@@ -383,7 +385,8 @@ img {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  border: none
+  border: none;
+  white-space: nowrap;
 }
 
 .subscription-title {
@@ -435,6 +438,7 @@ img {
   text-transform: uppercase;
   text-align: center;
   border-radius: 0 4px 4px 0;
+  white-space: nowrap;
 }
 
 .page-footer {
@@ -505,6 +509,11 @@ img {
   gap: 70px;
 }
 
+.catalog-filter-item {
+  display: flex;
+  gap: 16px;
+}
+
 .catalog-filter-right-group {
   display: flex;
   flex-wrap: wrap;
@@ -515,6 +524,12 @@ img {
   padding-left: 0;
   list-style: none;
   margin: 0;
+}
+
+.range-input-container {
+  display: flex;
+  gap: 2px;
+  max-width: 288px;
 }
 
 .catalog-filter-button-container {
@@ -601,6 +616,27 @@ img {
   color: #ffffff;
 }
 
+.control-input {
+  display: flex;
+  font-family: "Pt Sans", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+  border: none;
+  padding: 12px 20px;
+}
+
+.minimum-price {
+  border-radius: 4px 0 0 4px;
+  width: 100%;
+}
+
+.maximum-price {
+  border-radius: 0 4px 4px 0;
+  width: 100%;
+}
+
 fieldset.catalog-filter-group {
   border: none;
 }
@@ -611,7 +647,8 @@ fieldset.catalog-filter-group {
   font-family: "Pt Sans", sans-serif;
   font-size: 16px;
   line-height: 20px;
-  padding: 8px 20px
+  padding: 8px 20px;
+  white-space: nowrap;
 }
 
 .ghost-button {
@@ -620,6 +657,7 @@ fieldset.catalog-filter-group {
   font-size: 16px;
   line-height: 20px;
   padding: 8px 50px;
+  white-space: nowrap;
 }
 
 .control-control {
@@ -736,12 +774,14 @@ fieldset.catalog-filter-group {
   line-height: 20px;
   padding: 8px 26px;
   margin-right: 20px;
+  white-space: nowrap;
 }
 
 .product-card-button-favourite {
   background-color: #7DB54F;
   margin: 0;
   padding: 8px 18px;
+  white-space: nowrap;
 }
 
 .product-card-rating {
