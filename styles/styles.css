@@ -54,14 +54,13 @@ img {
 }
 
 .button {
-  font-family: "Pt Sans", sans-serif;
+  font-family: inherit;
   font-weight: 700;
   text-transform: uppercase;
   border-radius: 4px;
   cursor: pointer;
   padding: 8px 50px;
   border: none;
-  white-space: nowrap;
 }
 
 .visually-hidden {
@@ -174,14 +173,13 @@ img {
 }
 
 .primary-button-small {
-  font-family: "Pt Sans", sans-serif;
+  font-family: inherit;
   background-color: #756157;
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
   text-decoration: none;
   padding: 8px 34px;
-  white-space: nowrap;
 }
 
 .hero {
@@ -306,8 +304,8 @@ img {
 
 .recommendations-list {
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   padding: 0;
   margin: 0;
 }
@@ -315,7 +313,6 @@ img {
 .recommendations-item {
   padding: 81px 85px;
   align-content: center;
-  width: 33.33%;
 }
 
 .recommendations-item-title {
@@ -373,7 +370,6 @@ img {
 .hotel-search-description {
   font-size: 22px;
   line-height: 26px;
-  font-weight: 400;
   margin: 0 0 54px;
 }
 
@@ -386,7 +382,6 @@ img {
   font-weight: 700;
   text-transform: uppercase;
   border: none;
-  white-space: nowrap;
 }
 
 .subscription-title {
@@ -421,12 +416,11 @@ img {
   border: none;
   background-color: #F2F2F2;
   border-radius: 4px 0 0 4px;
-  font-family: "Pt Sans", sans-serif;
+  font-family: inherit;
   font-size: 18px;
   line-height: 24px;
-  font-weight: 400;
   color: #000000;
-  padding-left: 20px;
+  padding: 14px 20px;
 }
 
 .secondary-button {
@@ -438,7 +432,6 @@ img {
   text-transform: uppercase;
   text-align: center;
   border-radius: 0 4px 4px 0;
-  white-space: nowrap;
 }
 
 .page-footer {
@@ -545,9 +538,17 @@ img {
   padding-bottom: 40px;
 }
 
-.control-control {
+.sorting-select {
   margin-right: 70px;
   margin-left: auto;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  padding: 14px 20px;
+  color: #333333;
+  font-size: 18px;
+  line-height: 21px;
+  font-family: inherit;
+
 }
 
 .sorting-buttons-container {
@@ -579,7 +580,6 @@ img {
 .breadcrumbs-link {
   font-size: 16px;
   line-height: 21px;
-  font-weight: 400;
   color: #ffffff;
   text-decoration: none;
   display: flex;
@@ -609,16 +609,15 @@ img {
   margin: 0;
 }
 
-.control {
+.control-input-label {
   font-size: 18px;
   line-height: 23px;
-  font-weight: 400;
   color: #ffffff;
 }
 
 .control-input {
   display: flex;
-  font-family: "Pt Sans", sans-serif;
+  font-family: inherit;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
@@ -644,30 +643,19 @@ fieldset.catalog-filter-group {
 .secondary-button-small {
   background-color: #82B3D3;
   color: #ffffff;
-  font-family: "Pt Sans", sans-serif;
+  font-family: inherit;
   font-size: 16px;
   line-height: 20px;
   padding: 8px 20px;
-  white-space: nowrap;
 }
 
 .ghost-button {
   background-color: transparent;
   color: #ffffff;
+  font-family: inherit;
   font-size: 16px;
   line-height: 20px;
   padding: 8px 50px;
-  white-space: nowrap;
-}
-
-.control-control {
-  border: 2px solid #E5E5E5;
-  border-radius: 4px;
-  padding: 14px 20px;
-  color: #333333;
-  font-size: 18px;
-  line-height: 21px;
-  font-weight: 400;
 }
 
 .sorting-button {
@@ -716,43 +704,14 @@ fieldset.catalog-filter-group {
   padding: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 21px 36px 37px;
-  grid-template-areas:
-    "header header"
-    "category price"
-    "buttons buttons"
-    "rating rating";
-  gap: 16px;
-  height: 100%;
-}
-
-.product-card-link {
-  grid-area: header;
-}
-
-.product-card-category {
-  grid-area: category;
-}
-
-.product-card-price {
-  grid-area: price;
-  justify-self: end;
-}
-
-.product-card-button-container {
-  grid-area: buttons;
-}
-
-.hotel-class {
-  grid-area: rating;
-}
-
-.product-card-button-container {
-  display: flex;
+  grid-template-rows: 1fr auto auto auto;
+  gap: 16px 20px;
 }
 
 .product-card-link {
   text-decoration: none;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
 }
 
 .product-card-title {
@@ -773,15 +732,13 @@ fieldset.catalog-filter-group {
   font-size: 16px;
   line-height: 20px;
   padding: 8px 26px;
-  margin-right: 20px;
-  white-space: nowrap;
+  align-content: center;
 }
 
 .product-card-button-favourite {
   background-color: #7DB54F;
   margin: 0;
   padding: 8px 18px;
-  white-space: nowrap;
 }
 
 .product-card-rating {
@@ -805,13 +762,6 @@ fieldset.catalog-filter-group {
   padding-left: 0;
   align-items: center;
   list-style: none;
-}
-
-.hotel-class {
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
-  height: 37px;
 }
 
 .pagination {
