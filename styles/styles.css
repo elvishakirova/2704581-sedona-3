@@ -212,15 +212,7 @@ img {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.advantages-item:nth-child(1) {
-  grid-column: 1 / -1;
-}
-
-.advantages-item:nth-child(5) {
-  grid-column: 1 / -1;
-}
-
-.advantages-item:nth-child(5) .advantages-item-image {
+.advantages-item-with-image-bottom .advantages-item-image {
   order: -1;
 }
 
@@ -235,6 +227,7 @@ img {
   display: grid;
   grid-template-columns: 1fr 2fr;
   padding: 0;
+  grid-column: 1 / -1;
 }
 
 .advantages-item-with-image-bottom {
@@ -242,6 +235,7 @@ img {
   display: grid;
   grid-template-columns: 2fr 1fr;
   padding: 0;
+  grid-column: 1 / -1;
 }
 
 .blue-background {
@@ -323,7 +317,7 @@ img {
   margin: 0;
 }
 
-.recommendations-item:nth-child(1) .recommendations-item-title::before {
+.recommendations-house .recommendations-item-title::before {
   content: "";
   display: block;
   width: 72px;
@@ -335,7 +329,7 @@ img {
   background-size: contain;
 }
 
-.recommendations-item:nth-child(2) .recommendations-item-title::before {
+.recommendations-food .recommendations-item-title::before {
   content: "";
   display: block;
   width: 72px;
@@ -347,7 +341,7 @@ img {
   background-size: contain;
 }
 
-.recommendations-item:nth-child(3) .recommendations-item-title::before {
+.recommendations-gift .recommendations-item-title::before {
   content: "";
   display: block;
   width: 72px;
@@ -444,12 +438,18 @@ img {
 }
 
 .footer-social-link {
-  display: flex;
   width: 48px;
   height: 40px;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
+
+/* .footer-social-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
 
 .footer-social-list {
   list-style: none;
@@ -457,6 +457,7 @@ img {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  max-width: 146px;
 }
 
 .footer-phone-link {
@@ -699,7 +700,7 @@ fieldset.catalog-filter-group {
 }
 
 .product-card {
-  border: 1px solid #E5E5E5;
+  outline: 1px solid #E5E5E5;
   border-radius: 4px;
   padding: 20px;
   display: grid;
@@ -725,6 +726,10 @@ fieldset.catalog-filter-group {
 
 .product-card-category {
   margin: 0;
+}
+
+.product-card-price {
+  justify-self: end;
 }
 
 .product-card-button {
