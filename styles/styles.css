@@ -18,7 +18,7 @@ body {
   font-family: "Pt Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   color: #333333;
   display: flex;
   flex-direction: column;
@@ -107,7 +107,7 @@ img {
 }
 
 .nav-logo {
-  position:absolute;
+  position: absolute;
   height: 70px;
   width: 140px;
   top: 0;
@@ -148,11 +148,7 @@ img {
   color: #000000;
 }
 
-.navigation-link:hover {
-  color: #756157;
-}
-
-.navigation-link:focus {
+.navigation-link:hover, .navigation-link:focus {
   color: #756157;
 }
 
@@ -195,11 +191,7 @@ img {
   color: #000000;
 }
 
-.search:hover {
-  color: #756157;
-}
-
-.search:focus {
+.search:hover, .search:focus {
   color: #756157;
 }
 
@@ -215,11 +207,7 @@ img {
   color: #000000;
 }
 
-.favourite:hover {
-  color: #756157;
-}
-
-.favourite:focus {
+.favourite:hover, .favourite:focus  {
   color: #756157;
 }
 
@@ -236,7 +224,7 @@ img {
   width: 20px;
   height: 20px;
   background-color: #7DB54F;
-  color: #ffffff;
+  color: #FFFFFF;
   font-size: 10px;
   line-height: 10px;
   border-radius: 50%;
@@ -251,7 +239,7 @@ img {
 .primary-button-small {
   font-family: inherit;
   background-color: #756157;
-  color: #ffffff;
+  color: #FFFFFF;
   font-size: 16px;
   line-height: 20px;
   text-decoration: none;
@@ -267,6 +255,7 @@ img {
 
 .primary-button-small:focus {
   background-color: #615048;
+  outline: none;
 }
 
 .primary-button-small:active {
@@ -364,7 +353,7 @@ img {
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
-  color: #ffffff;
+  color: #FFFFFF;
   text-transform: uppercase;
   position: relative;
 }
@@ -387,7 +376,7 @@ img {
 .advantages-item-description-white {
   font-size: 18px;
   line-height: 21px;
-  color: #ffffff;
+  color: #FFFFFF;
   margin: 0;
 }
 
@@ -484,7 +473,7 @@ img {
 
 .primary-button-large {
   background-color: #756157;
-  color: #ffffff;
+  color: #FFFFFF;
   padding: 8px 50px;
   font-size: 20px;
   line-height: 36px;
@@ -501,6 +490,7 @@ img {
 
 .primary-button-large:focus {
   background-color: #615048;
+  outline: none;
 }
 
 .primary-button-large:active {
@@ -513,14 +503,14 @@ img {
 }
 
 .subscription-title {
-  color: #ffffff;
+  color: #FFFFFF;
   margin-bottom: 20px;
 }
 
 .subscription-description {
   font-size: 22px;
   line-height: 26px;
-  color: #ffffff;
+  color: #FFFFFF;
   margin: 0 auto 54px;
 }
 
@@ -557,7 +547,8 @@ img {
 
 .subscription-form-input:focus {
   background-color: #E6E6E6;
-  border: #83B3D3 3px solid;
+  outline: #83B3D3 3px solid;
+  outline-offset: -3px;
 }
 
 .subscription-form-input:disabled {
@@ -566,7 +557,7 @@ img {
 
 .secondary-button {
   background-color: #82B3D3;
-  color: #ffffff;
+  color: #FFFFFF;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
@@ -576,13 +567,10 @@ img {
   border: none;
   cursor: pointer;
   display: inline-block;
+  outline: none;
 }
 
-.secondary-button:hover {
-  background-color: #68A2CA;
-}
-
-.secondary-button:focus {
+.secondary-button:hover, .secondary-button:focus {
   background-color: #68A2CA;
 }
 
@@ -596,7 +584,7 @@ img {
 }
 
 .page-footer {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   color: #000000;
   display: flex;
   justify-content: space-between;
@@ -631,6 +619,7 @@ img {
 
 .social-icon:focus {
   color: #68A2CA;
+  outline: none;
 }
 
 .social-icon:active {
@@ -654,6 +643,7 @@ img {
 
 .footer-phone-link:focus {
   color: #756157;
+  outline: none;
 }
 
 .footer-phone-link:active {
@@ -674,6 +664,7 @@ img {
 
 .footer-logo-link:focus {
   color: #756157;
+  outline: none;
 }
 
 .footer-logo-link:active {
@@ -686,6 +677,7 @@ img {
 
 .footer-phone-link:focus {
   color: #756157;
+  outline: none;
 }
 
 .footer-phone-link:active {
@@ -752,6 +744,12 @@ img {
   max-width: 288px;
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
 .catalog-filter-button-container {
   display: flex;
   flex-direction: column;
@@ -766,12 +764,13 @@ img {
 }
 
 .sorting-select {
+  min-height: 48px;
   margin-right: 70px;
   margin-left: auto;
   width: 292px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
-  padding: 14px 20px;
+  padding: 10px 20px;
   color: #333333;
   font-size: 18px;
   line-height: 21px;
@@ -784,6 +783,7 @@ img {
 
 .sorting-select:focus {
   border: 2px solid #68A2CA;
+  outline: none;
 }
 
 .sorting-select:active {
@@ -804,7 +804,7 @@ img {
   font-size: 60px;
   line-height: 70px;
   font-weight: 700;
-  color: #ffffff;
+  color: #FFFFFF;
   margin: 0 0 8px;
 }
 
@@ -825,7 +825,7 @@ img {
 .breadcrumbs-link {
   font-size: 16px;
   line-height: 21px;
-  color: #ffffff;
+  color: #FFFFFF;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -836,7 +836,8 @@ img {
 }
 
 .breadcrumbs-link:focus {
-  color: #ffffff;
+  color: #FFFFFF;
+  outline: none;
 }
 
 .breadcrumbs-link:active {
@@ -860,7 +861,7 @@ img {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
-  color: #ffffff;
+  color: #FFFFFF;
   padding: 0;
   margin-bottom: 32px;
 }
@@ -882,7 +883,7 @@ img {
 .control-input-label {
   font-size: 18px;
   line-height: 23px;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 .control-input {
@@ -894,6 +895,20 @@ img {
   color: #000000;
   border: none;
   padding: 12px 20px;
+}
+
+.control-input:hover {
+  background-color: #E6E6E6;
+}
+
+.control-input:focus {
+  background-color: #E6E6E6;
+  outline: #83B3D3 3px solid;
+  outline-offset: -3px;
+}
+
+.control-input:disabled {
+  color: #E5E5E5;
 }
 
 .minimum-price {
@@ -912,7 +927,7 @@ fieldset.catalog-filter-group {
 
 .secondary-button-small {
   background-color: #82B3D3;
-  color: #ffffff;
+  color: #FFFFFF;
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
@@ -928,6 +943,7 @@ fieldset.catalog-filter-group {
 
 .secondary-button-small:focus {
   background-color: #68A2CA;
+  outline: none;
 }
 
 .secondary-button-small:active {
@@ -941,7 +957,7 @@ fieldset.catalog-filter-group {
 
 .ghost-button {
   background-color: transparent;
-  color: #ffffff;
+  color: #FFFFFF;
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
@@ -956,8 +972,9 @@ fieldset.catalog-filter-group {
 }
 
 .ghost-button:focus {
-  border: 3px solid #83B3D3;
-  color: #ffffff;
+  outline: 3px solid #83B3D3;
+  outline-offset: -3px;
+  color: #FFFFFF;
 }
 
 .ghost-button:active {
@@ -987,6 +1004,7 @@ fieldset.catalog-filter-group {
 
 .sorting-button:focus {
   border-color: #68A2CA;
+  outline: none;
 }
 
 .sorting-button:active {
@@ -1049,6 +1067,10 @@ fieldset.catalog-filter-group {
   grid-row: 1 / 2;
 }
 
+.product-card-link:focus {
+  outline: none;
+}
+
 .product-card-title {
   margin: 16px 0 0;
   font-size: 24px;
@@ -1067,7 +1089,7 @@ fieldset.catalog-filter-group {
 }
 
 .product-card-button {
-  color: #ffffff;
+  color: #FFFFFF;
   font-size: 16px;
   line-height: 20px;
   padding: 8px 26px;
@@ -1092,6 +1114,7 @@ fieldset.catalog-filter-group {
 
 .product-card-button-favourite:focus {
   background-color: #6C9E42;
+  outline: none;
 }
 
 .product-card-button-favourite:active {
@@ -1142,7 +1165,7 @@ fieldset.catalog-filter-group {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
-  color: #ffffff;
+  color: #FFFFFF;
   text-decoration: none;
   min-width: 60px;
   max-width: 70px;
@@ -1159,6 +1182,7 @@ fieldset.catalog-filter-group {
 
 .pagination-link:focus {
   background-color: #68A2CA;
+  outline: none;
 }
 
 .pagination-link:active {
@@ -1168,28 +1192,33 @@ fieldset.catalog-filter-group {
 
 .pagination-link:disabled {
   background-color: #E5E5E5;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 .pagination-current {
   background-color: #F2F2F2;
   color: #000000;
+  pointer-events: none;
 }
 
 .pagination-current:hover {
   background-color: #F2F2F2;
+  pointer-events: none;
 }
 
 .pagination-current:focus {
   background-color: #F2F2F2;
+  pointer-events: none;
 }
 
 .pagination-current:active {
   background-color: #F2F2F2;
+  pointer-events: none;
 }
 
 .pagination-current:disabled {
   background-color: #F2F2F2;
+  pointer-events: none;
 }
 
 .more {
@@ -1203,6 +1232,7 @@ fieldset.catalog-filter-group {
 
 .more:focus {
   background-color: transparent;
+  outline: none;
 }
 
 .more:active {
