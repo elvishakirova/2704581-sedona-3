@@ -207,7 +207,7 @@ img {
   color: #000000;
 }
 
-.favourite:hover, .favourite:focus  {
+.favourite:hover, .favourite:focus {
   color: #756157;
 }
 
@@ -529,6 +529,10 @@ img {
   margin: 0 auto;
 }
 
+.subscription-button {
+  border-radius: 0 4px 4px 0;
+}
+
 .subscription-form-input {
   width: 100%;
   border: none;
@@ -563,7 +567,6 @@ img {
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
-  border-radius: 0 4px 4px 0;
   border: none;
   cursor: pointer;
   display: inline-block;
@@ -684,6 +687,261 @@ img {
   color: #7561574D;
 }
 
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #F2F2F2CC;
+}
+
+.modal {
+  width: 717px;
+  position: relative;
+  margin: auto;
+  padding: 64px 70px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0px 25px 50px 0px #00000026;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.modal-form-label {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.modal-close-button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 64px;
+  right: 52px;
+  width: 52px;
+  height: 52px;
+  background-color: #F2F2F2;
+  border-radius: 50%;
+  border: none;
+}
+
+.modal-close-button:hover {
+  background-color: #E5E5E5;
+}
+
+.modal-close-button:focus {
+  background-color: #E5E5E5;
+  outline: #83B3D3 3px solid;
+  outline-offset: -3px;
+}
+
+.modal-close-button:active {
+  background-color: #E5E5E5;
+}
+
+.modal-close-button:disabled {
+  color: #E5E5E5;
+}
+
+.close-icon:active, .close-icon:disabled {
+  color: #0000004d;
+}
+
+.modal-search-title {
+  margin-bottom: 64px;
+  padding-right: 54px;
+}
+
+.modal-search-button {
+  flex-grow: 1;
+}
+
+.modal-form-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.modal-form-input {
+  width: 440px;
+  border: none;
+  border-radius: 4px;
+  background-color: #F2F2F2;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 24px;
+  color: #000000;
+  font-weight: 700;
+  padding: 12px 20px;
+  background-image: url("../images/calendar.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 15px 16px;
+}
+
+.error-message {
+  position: absolute;
+  left: 157px;
+  top: 52px;
+  font-size: 16px;
+  line-height: 21px;
+  color: #FF5757;
+  font-weight: 400;
+}
+
+.information-message {
+  position: absolute;
+  left: 157px;
+  top: 52px;
+  font-size: 16px;
+  line-height: 21px;
+  color: inherit;
+  font-weight: 400;
+}
+
+.modal-form-input:hover {
+  background-color: #E6E6E6;
+}
+
+.modal-form-input:focus {
+  background-color: #E6E6E6;
+  outline: #83B3D3 3px solid;
+  outline-offset: -3px;
+}
+
+.modal-form-input:disabled {
+  color: #E5E5E5;
+}
+
+.guest-amount-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.guest-control-wrapper {
+  display: flex;
+  gap: 46px;
+}
+
+.quantity-picker {
+  display: flex;
+  gap: 0;
+}
+
+.btn-minus {
+  height: 48px;
+  padding: 14px 10px;
+  border-radius: 4px 0 0 4px;
+  border: none;
+}
+
+.btn-plus {
+  height: 48px;
+  padding: 14px 10px;
+  border-radius: 0 4px 4px 0;
+  border: none;
+}
+
+.modal-input-guest-amount {
+  width: 31px;
+  border: none;
+  background-color: #F2F2F2;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 24px;
+  color: #000000;
+  font-weight: 700;
+  text-align: center;
+  padding: 10px 0;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+
+.label-with-info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip-toggle {
+  border: none;
+  background-color: #83B3D3;
+  padding: 0;
+  margin: 0;
+  display: block;
+  border-radius: 50%;
+  height: 20px;
+}
+
+.tooltip-icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.tooltip-text {
+  width: 256px;
+  background-color: #333333;
+  border-radius: 10px;
+  padding: 15px 20px 18px;
+  color: #FFFFFF;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  margin-top: 16px;
+  display: none;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+.tooltip-text:after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #333333;
+}
+
 .catalog-hero {
   background-color: lightgray;
   display: block;
@@ -769,7 +1027,7 @@ img {
   opacity: 0.6;
 }
 
-.control-input-checkbox:focus-visible  ~ .control-input-label .control-mark-checkbox {
+.control-input-checkbox:focus-visible~.control-input-label .control-mark-checkbox {
   outline: 3px solid #83B3D3;
 }
 
@@ -777,11 +1035,11 @@ img {
   opacity: 0.3;
 }
 
-.control-input-checkbox:disabled ~ .control-input-label .control-mark-checkbox {
+.control-input-checkbox:disabled~.control-input-label .control-mark-checkbox {
   background-color: #FFFFFF1A;
 }
 
-.control-input-checkbox[type="checkbox"]:checked ~ .control-input-label .control-mark-checkbox::before {
+.control-input-checkbox[type="checkbox"]:checked~.control-input-label .control-mark-checkbox::before {
   position: absolute;
   top: 5px;
   left: 3px;
@@ -824,7 +1082,7 @@ img {
   opacity: 0.6;
 }
 
-.control-input-radio:focus-visible  ~ .control-input-label .control-mark-radio {
+.control-input-radio:focus-visible~.control-input-label .control-mark-radio {
   outline: 3px solid #83B3D3;
 }
 
@@ -832,11 +1090,11 @@ img {
   opacity: 0.3;
 }
 
-.control-input-radio:disabled ~ .control-input-label .control-mark-radio {
+.control-input-radio:disabled~.control-input-label .control-mark-radio {
   background-color: #FFFFFF1A;
 }
 
-.control-input-radio[type="radio"]:checked ~ .control-input-label .control-mark-radio::before {
+.control-input-radio[type="radio"]:checked~.control-input-label .control-mark-radio::before {
   position: absolute;
   top: 5px;
   left: 5px;
@@ -858,6 +1116,10 @@ img {
   gap: 2px;
   max-width: 288px;
   margin-bottom: 36px;
+}
+
+.control-input-label-range {
+  position: relative;
 }
 
 .range-title {
@@ -1023,15 +1285,15 @@ input[type="number"]::-webkit-inner-spin-button {
   font-weight: 700;
   color: #000000;
   border: none;
-  padding: 12px 20px;
+  padding: 12px 40px 12px 20px;
 }
 
 .control-input:hover {
-  background-color: #E6E6E6;
+  background-color: #E5E5E5;
 }
 
 .control-input:focus {
-  background-color: #E6E6E6;
+  background-color: #E5E5E5;
   outline: #83B3D3 3px solid;
   outline-offset: -3px;
 }

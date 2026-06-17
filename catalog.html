@@ -141,13 +141,13 @@
               <ul class="catalog-filter-range">
                 <li class="catalog-filter-item-range">
                   <div class="range-input-container">
-                    <label class="control-input-label">
-                      <input class="control-input minimum-price" type="number" name="minimum-price" value="0"
+                    <label class="control-input-label-range">
+                      <input class="control-input minimum-price" type="number" name="minimum-price" value="0" placeholder="0"
                         step="1000">
                       <span class="range-title">от</span>
                     </label>
-                    <label class="control-input-label">
-                      <input class="control-input maximum-price" type="number" name="maximum-price" value="9000"
+                    <label class="control-input-label-range">
+                      <input class="control-input maximum-price" type="number" name="maximum-price" value="9000" placeholder="9000"
                         step="1000">
                       <span class="range-title">до</span>
                     </label>
@@ -164,8 +164,6 @@
                       </button>
                     </div>
                   </div>
-                  <!-- <input class="control-input-range" type="range" name="price" min="0" max="12000"> -->
-                  <!-- <input class="control-input-range" type="range" name="price" min="0" max="12000"> -->
                 </li>
               </ul>
             </fieldset>
@@ -374,7 +372,7 @@
       <p class="subscription-description-black">Только полезная информация и никакого спама<br>честное бойскаутское!</p>
       <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
         <input class="subscription-form-input" type="email" name="email" placeholder="Ваш email" required>
-        <button class="secondary-button button" type="submit">Подписаться</button>
+        <button class="secondary-button button subscription-button" type="submit">Подписаться</button>
       </form>
     </section>
 
