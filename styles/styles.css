@@ -555,6 +555,10 @@ img {
   outline-offset: -3px;
 }
 
+.subscription-form-input:active {
+  color: #000000;
+}
+
 .subscription-form-input:disabled {
   color: #E5E5E5;
 }
@@ -578,7 +582,7 @@ img {
 }
 
 .secondary-button:active {
-  background-color: #68A2CA4D;
+  background-color: #68A2CA;
   color: #FFFFFF4D;
 }
 
@@ -688,19 +692,26 @@ img {
 }
 
 .modal-container {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
   width: 100%;
   height: 100%;
   background-color: #F2F2F2CC;
 }
 
+.modal-container-open {
+  display: flex;
+}
+
 .modal {
-  width: 717px;
+  max-height: 576px;
+  overflow-Y: auto;
+  width: 100%;
+  max-width: 717px;
   position: relative;
-  margin: auto;
+  margin: 20px auto;
   padding: 64px 70px;
   background-color: #ffffff;
   border-radius: 30px;
@@ -708,17 +719,25 @@ img {
 }
 
 .modal-form {
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
+  display: grid;
+  gap: 18px 23px;
+  grid-template-columns: 119px 180px 113px 111px;
 }
 
 .modal-form-label {
+  padding-top: 12px;
   font-family: inherit;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
   color: #000000;
+}
+
+.modal-form-label-children {
+  padding-top: 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 .modal-close-button {
@@ -747,13 +766,11 @@ img {
 
 .modal-close-button:active {
   background-color: #E5E5E5;
+  color: #0000004d;
 }
 
 .modal-close-button:disabled {
-  color: #E5E5E5;
-}
-
-.close-icon:active, .close-icon:disabled {
+  background-color: #E5E5E5;
   color: #0000004d;
 }
 
@@ -763,18 +780,22 @@ img {
 }
 
 .modal-search-button {
-  flex-grow: 1;
+  margin-top: 25px;
+  grid-column: 1 / -1;
+  height: 60px;
 }
 
-.modal-form-label {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
+.check-in-date-input {
+  grid-column: 2 / -1;
+}
+
+.check-out-date-input {
+  grid-column: 2 / -1;
 }
 
 .modal-form-input {
-  width: 440px;
+  width: 100%;
+  display: block;
   border: none;
   border-radius: 4px;
   background-color: #F2F2F2;
@@ -791,9 +812,7 @@ img {
 }
 
 .error-message {
-  position: absolute;
-  left: 157px;
-  top: 52px;
+  padding: 4px 0 0 20px;
   font-size: 16px;
   line-height: 21px;
   color: #FF5757;
@@ -801,9 +820,7 @@ img {
 }
 
 .information-message {
-  position: absolute;
-  left: 157px;
-  top: 52px;
+  padding: 4px 0 0 20px;
   font-size: 16px;
   line-height: 21px;
   color: inherit;
@@ -818,6 +835,11 @@ img {
   background-color: #E6E6E6;
   outline: #83B3D3 3px solid;
   outline-offset: -3px;
+}
+
+.modal-form-input:active {
+  background-color: #F5F5F5;
+  color: #000000;
 }
 
 .modal-form-input:disabled {
@@ -844,6 +866,8 @@ img {
   padding: 14px 10px;
   border-radius: 4px 0 0 4px;
   border: none;
+  background-color: #F2F2F2;
+  color: #00000026;
 }
 
 .btn-plus {
@@ -851,6 +875,34 @@ img {
   padding: 14px 10px;
   border-radius: 0 4px 4px 0;
   border: none;
+  background-color: #F2F2F2;
+  color: #00000026;
+}
+
+.quantity-picker button:focus {
+  outline: none;
+}
+
+.quantity-picker button:hover svg {
+  color: #000000;
+  background-color: #E6E6E6;
+}
+
+.quantity-picker button:focus-visible svg {
+  background-color: #E6E6E6;
+  outline: #83B3D3 3px solid;
+  outline-offset: -3px;
+  border-radius: 4px;
+}
+
+.quantity-picker button:active svg {
+  background-color: #F5F5F5;
+  color: #000000;
+}
+
+.quantity-picker button:disabled svg {
+  background-color: #E5E5E5;
+  color: #0000004d;
 }
 
 .modal-input-guest-amount {
@@ -865,6 +917,28 @@ img {
   text-align: center;
   padding: 10px 0;
 }
+
+.modal-input-guest-amount:hover {
+  background-color: #E6E6E6;
+}
+
+.modal-input-guest-amount:focus {
+  background-color: #E6E6E6;
+  outline: #83B3D3 3px solid;
+  outline-offset: -3px;
+  border-radius: 4px;
+}
+
+.modal-input-guest-amount:active {
+  background-color: #F5F5F5;
+  color: #000000;
+}
+
+.modal-input-guest-amount:disabled {
+  color: #E5E5E5;
+  color: #0000004d;
+}
+
 
 input[type="date"]::-webkit-calendar-picker-indicator {
   background: transparent;
@@ -887,6 +961,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .tooltip {
   position: relative;
+}
+
+.tooltip-toggle:focus {
+  outline: none;
 }
 
 .tooltip-toggle {
@@ -924,8 +1002,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   display: none;
 }
 
-.tooltip-toggle:hover + .tooltip-text,
-.tooltip-toggle:focus + .tooltip-text {
+.tooltip-toggle:hover+.tooltip-text,
+.tooltip-toggle:focus+.tooltip-text {
   display: block;
 }
 
@@ -970,11 +1048,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .catalog-filter-item {
-  display: flex;
-  gap: 16px;
-  position: relative;
   padding-left: 36px;
-  cursor: pointer;
 }
 
 .catalog-filter-right-group {
@@ -991,10 +1065,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .control-input-checkbox {
   width: 20px;
   border-radius: 4px;
-}
-
-.control-input-label {
-  cursor: pointer;
 }
 
 .control-mark-checkbox {
@@ -1027,22 +1097,23 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 0.6;
 }
 
-.control-input-checkbox:focus-visible~.control-input-label .control-mark-checkbox {
+.control-input-checkbox:focus-visible+.control-mark-checkbox {
   outline: 3px solid #83B3D3;
 }
 
-.control-input-label:active .control-mark-checkbox {
+.control-input-checkbox:active+.control-mark-checkbox {
   opacity: 0.3;
 }
 
-.control-input-checkbox:disabled~.control-input-label .control-mark-checkbox {
+.control-input-checkbox:disabled+.control-mark-checkbox {
   background-color: #FFFFFF1A;
 }
 
-.control-input-checkbox[type="checkbox"]:checked~.control-input-label .control-mark-checkbox::before {
+.control-input-checkbox[type="checkbox"]:checked+.control-mark-checkbox::before {
   position: absolute;
-  top: 5px;
-  left: 3px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 13px;
   height: 10px;
   background-image: url("../images/check.svg");
@@ -1082,22 +1153,23 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 0.6;
 }
 
-.control-input-radio:focus-visible~.control-input-label .control-mark-radio {
+.control-input-radio:focus-visible+.control-mark-radio {
   outline: 3px solid #83B3D3;
 }
 
-.control-input-label:active .control-mark-radio {
+.control-input-label:active+.control-mark-radio {
   opacity: 0.3;
 }
 
-.control-input-radio:disabled~.control-input-label .control-mark-radio {
+.control-input-radio:disabled+.control-mark-radio {
   background-color: #FFFFFF1A;
 }
 
-.control-input-radio[type="radio"]:checked~.control-input-label .control-mark-radio::before {
+.control-input-radio[type="radio"]:checked+.control-mark-radio::before {
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 10px;
   height: 10px;
   content: "";
@@ -1179,6 +1251,12 @@ input[type="number"]::-webkit-inner-spin-button {
 .sorting-select:active {
   border: 2px solid #0000004D;
   color: #0000004D;
+}
+
+.sorting-select:disabled {
+  border: 2px solid #000000;
+  color: #000000;
+  opacity: 0.3;
 }
 
 .sorting-buttons-container {
@@ -1285,7 +1363,7 @@ input[type="number"]::-webkit-inner-spin-button {
   font-weight: 700;
   color: #000000;
   border: none;
-  padding: 12px 40px 12px 20px;
+  padding: 12px 44px 12px 20px;
 }
 
 .control-input:hover {
@@ -1303,7 +1381,6 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .range-scale {
-  width: 288px;
   position: relative;
   height: 4px;
   background-color: #FFFFFF4D;
@@ -1338,13 +1415,15 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .toggle-min {
-  top: -8px;
+  top: 50%;
   left: 0;
+  transform: translateY(-50%)
 }
 
 .toggle-max {
-  top: -8px;
+  top: 50%;
   right: 0;
+  transform: translateY(-50%)
 }
 
 .minimum-price {
@@ -1383,7 +1462,7 @@ fieldset.catalog-filter-group {
 }
 
 .secondary-button-small:active {
-  background-color: #68A2CA4D;
+  background-color: #68A2CA;
   color: #FFFFFF4D;
 }
 
@@ -1501,10 +1580,6 @@ fieldset.catalog-filter-group {
   text-decoration: none;
   grid-column: 1 / -1;
   grid-row: 1 / 2;
-}
-
-.product-card-link:focus {
-  outline: none;
 }
 
 .product-card-title {

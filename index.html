@@ -128,7 +128,7 @@
       <p class="hotel-search-description">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения
         гостиниц
         в Седоне</p>
-      <button class="primary-button-large button" type="button">Поиск гостиницы в Седоне</button>
+      <button class="primary-button-large button open-modal-button" type="button">Поиск гостиницы в Седоне</button>
     </section>
 
     <section class="subscription">
@@ -231,84 +231,105 @@
     </div>
   </footer>
 
-  <div class="modal-container visually-hidden">
+  <div class="modal-container">
     <div class="modal modal-search">
       <button class="modal-close-button">
-        <svg class="close-icon" aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="close-icon" aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 20 20"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M17 4.29231L15.7077 3L10 8.70769L4.29231 3L3 4.29231L8.70769 10L3 15.7077L4.29231 17L10 11.2923L15.7077 17L17 15.7077L11.2923 10L17 4.29231Z"
-            fill="black" />
+            fill="currentColor" />
         </svg>
         <span class="visually-hidden">Закрыть</span>
       </button>
       <section class="modal-search-content">
         <h2 class="modal-search-title section-title">Поиск гостиницы в Седоне</h2>
         <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
-          <label class="modal-form-label">Дата заезда:
-            <input class="modal-form-input" type="text" name="check-in-date" value="27 апреля 2020" placeholder="Укажите дату" required>
+          <label class="modal-form-label" for="check-in-date">Дата заезда:</label>
+          <div class="check-in-date-input">
+            <input class="modal-form-input" type="text" id="check-in-date" name="check-in-date" value="27 апреля 2020"
+              placeholder="Укажите дату" required>
             <span class="error-message">Мы не можем отправить вас в прошлое.</span>
-          </label>
-
-          <label class="modal-form-label">Дата выезда:
-            <input class="modal-form-input" type="text" name="check-out-date" value="1 сентября 2023" placeholder="Укажите дату" required>
-            <span class="information-message">На эти даты есть свободные номера. Пока есть.</span>
-          </label>
-
-          <div class="guest-amount-container">
-            <div class="guest-control-wrapper">
-              <label class="modal-form-label" for="adults">Взрослые:</label>
-              <div class="quantity-picker">
-                <button type="button" class="btn-minus" onclick="this.nextElementSibling.stepDown()">
-                  <img src="images/button-minus.svg" width="20" height="20" alt="Кнопка уменьшения количества взрослых"
-                    aria-hidden="true">
-                  <span class="visually-hidden">Уменьшить количество взрослых</span>
-                </button>
-                <input class="modal-input-guest-amount" type="number" id="adults" name="adults" min="1" max="10"
-                  value="2" required>
-                <button type="button" class="btn-plus" onclick="this.previousElementSibling.stepUp()">
-                  <img src="images/button-plus.svg" width="20" height="20" alt="Кнопка увеличения количества взрослых"
-                    aria-hidden="true">
-                  <span class="visually-hidden">Увеличить количество взрослых</span>
-                </button>
-              </div>
-            </div>
-
-            <div class="guest-control-wrapper">
-              <div class="label-with-info">
-                <label class="modal-form-label" for="children">Дети:</label>
-                <span class="tooltip">
-                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
-                    <svg class="tooltip-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M9 4H11V6H9V4ZM11 16H9V7H11V16Z" fill="white" />
-                    </svg>
-                  </button>
-                  <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые
-                    будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
-                </span>
-              </div>
-              <div class="quantity-picker">
-                <button type="button" class="btn-minus" onclick="this.nextElementSibling.stepDown()">
-                  <img src="images/button-minus.svg" width="20" height="20" alt="Кнопка уменьшения количества детей"
-                    aria-hidden="true">
-                  <span class="visually-hidden">Уменьшить количество детей</span>
-                </button>
-                <input class="modal-input-guest-amount" type="number" name="children" id="children" min="0" max="10"
-                  value="2" required>
-                <button type="button" class="btn-plus" onclick="this.previousElementSibling.stepUp()">
-                  <img src="images/button-plus.svg" width="20" height="20" alt="Кнопка увеличения количества детей"
-                    aria-hidden="true">
-                  <span class="visually-hidden">Увеличить количество детей</span>
-                </button>
-              </div>
-            </div>
           </div>
 
+          <label class="modal-form-label" for="check-out-date">Дата выезда:</label>
+          <div class="check-out-date-input">
+            <input class="modal-form-input" type="text" id="check-out-date" name="check-out-date"
+              value="1 сентября 2023" placeholder="Укажите дату" required>
+            <span class="information-message">На эти даты есть свободные номера. Пока есть.</span>
+          </div>
+
+          <label class="modal-form-label" for="adults">Взрослые:</label>
+          <div class="quantity-picker">
+            <button type="button" class="btn-minus" onclick="this.nextElementSibling.stepDown()">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 9V11H17V9H3Z" fill="currentColor" />
+              </svg>
+              <span class="visually-hidden">Уменьшить количество взрослых</span>
+            </button>
+            <input class="modal-input-guest-amount" type="number" id="adults" name="adults" min="1" max="10" value="2"
+              required>
+            <button type="button" class="btn-plus" onclick="this.previousElementSibling.stepUp()">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" fill="currentColor" />
+              </svg>
+              <span class="visually-hidden">Увеличить количество взрослых</span>
+            </button>
+          </div>
+
+          <label class="modal-form-label modal-form-label-children" for="children">Дети:
+            <span class="tooltip">
+              <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                <svg class="tooltip-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M9 4H11V6H9V4ZM11 16H9V7H11V16Z" fill="white" />
+                </svg>
+              </button>
+              <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые
+                будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+            </span>
+          </label>
+          <div class="quantity-picker">
+            <button type="button" class="btn-minus" onclick="this.nextElementSibling.stepDown()">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 9V11H17V9H3Z" fill="currentColor" />
+              </svg>
+              <span class="visually-hidden">Уменьшить количество детей</span>
+            </button>
+            <input class="modal-input-guest-amount" type="number" name="children" id="children" min="0" max="10"
+              value="2" required>
+            <button type="button" class="btn-plus" onclick="this.previousElementSibling.stepUp()">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" fill="currentColor" />
+              </svg>
+              <span class="visually-hidden">Увеличить количество детей</span>
+            </button>
+          </div>
 
           <button class="secondary-button button modal-search-button" type="submit">Найти гостиницу</button>
         </form>
       </section>
     </div>
+
+    <script>
+      const modal = document.querySelector('.modal-container');
+      const openButton = document.querySelector('.open-modal-button');
+      const closeButton = document.querySelector('.modal-close-button');
+
+      openButton.addEventListener('click', () => {
+        modal.classList.add('modal-container-open');
+      });
+
+      closeButton.addEventListener('click', () => {
+        modal.classList.remove('modal-container-open');
+      });
+
+      modal.addEventListener('click', (evt) => {
+        if (evt.target === modal) {
+          modal.classList.remove('modal-container-open');
+        }
+      });
+    </script>
 
 </body>
 
