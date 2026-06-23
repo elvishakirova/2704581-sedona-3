@@ -782,6 +782,17 @@ img {
   background-color: #F2F2F2CC;
 }
 
+.modal-container-test {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 20px;
+  background-color: #F2F2F2CC;
+}
+
 .modal-container-open {
   display: flex;
 }
@@ -801,8 +812,8 @@ img {
 
 .modal-form {
   display: grid;
-  grid-template-columns: 1fr 110px 1fr 110px;
-  gap: 18px 23px;
+  grid-template-columns: 119px 110px 1fr 110px;
+  gap: 23px 18px;
 }
 
 .modal-form-label {
@@ -816,7 +827,7 @@ img {
 
 .modal-form-label-children {
   display: flex;
-  padding-top: 0;
+  padding: 0 28px 0 0;
   gap: 10px;
   align-items: center;
   justify-content: end;
@@ -865,6 +876,7 @@ img {
   grid-column: 1 / -1;
   margin-top: 25px;
   height: 60px;
+  border-radius: 10px;
 }
 
 .check-in-date-input {
@@ -887,13 +899,14 @@ img {
   background-image: url("../images/calendar.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
-  background-size: 15px 16px;
+  background-size: 19px 20px;
   border: none;
   border-radius: 4px;
   background-color: #F2F2F2;
 }
 
 .error-message {
+  display: block;
   padding: 4px 0 0 20px;
   font-size: 16px;
   line-height: 21px;
@@ -902,6 +915,7 @@ img {
 }
 
 .information-message {
+  display: block;
   padding: 4px 0 0 20px;
   font-size: 16px;
   line-height: 21px;
@@ -941,6 +955,29 @@ img {
 .quantity-picker {
   display: flex;
   gap: 0;
+  background-color: #F2F2F2;
+  border-radius: 4px;
+}
+
+.quantity-picker:hover {
+  background-color: #E6E6E6;
+}
+
+.quantity-picker:focus-within {
+  background-color: #E6E6E6;
+  outline: #83B3D3 3px solid;
+  outline-offset: -3px;
+  border-radius: 4px;
+}
+
+.quantity-picker:active {
+  color: #000000;
+  background-color: #F5F5F5;
+}
+
+.quantity-picker:disabled {
+  color: #0000004d;
+  background-color: #E5E5E5;
 }
 
 .btn-minus {
@@ -949,7 +986,7 @@ img {
   color: #00000026;
   border-radius: 4px 0 0 4px;
   border: none;
-  background-color: #F2F2F2;
+  background-color: transparent;
 }
 
 .btn-plus {
@@ -958,16 +995,15 @@ img {
   color: #00000026;
   border-radius: 0 4px 4px 0;
   border: none;
-  background-color: #F2F2F2;
+  background-color: transparent;
+}
+
+.quantity-picker:hover {
+  background-color: #e6e6e6;
 }
 
 .quantity-picker button:focus {
   outline: none;
-}
-
-.quantity-picker button:hover svg {
-  color: #000000;
-  background-color: #E6E6E6;
 }
 
 .quantity-picker button:focus-visible svg {
@@ -979,12 +1015,10 @@ img {
 
 .quantity-picker button:active svg {
   color: #000000;
-  background-color: #F5F5F5;
 }
 
 .quantity-picker button:disabled svg {
   color: #0000004d;
-  background-color: #E5E5E5;
 }
 
 .modal-input-guest-amount {
@@ -997,11 +1031,7 @@ img {
   color: #000000;
   font-weight: 700;
   border: none;
-  background-color: #F2F2F2;
-}
-
-.modal-input-guest-amount:hover {
-  background-color: #E6E6E6;
+  background-color: transparent;
 }
 
 .modal-input-guest-amount:focus {
@@ -1010,17 +1040,6 @@ img {
   outline-offset: -3px;
   border-radius: 4px;
 }
-
-.modal-input-guest-amount:active {
-  color: #000000;
-  background-color: #F5F5F5;
-}
-
-.modal-input-guest-amount:disabled {
-  color: #0000004d;
-  background-color: #E5E5E5;
-}
-
 
 input[type="date"]::-webkit-calendar-picker-indicator {
   position: absolute;
@@ -1050,7 +1069,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   display: block;
   padding: 0;
   margin: 0;
-  height: 20px;
+  height: 26px;
   border-radius: 50%;
   border: none;
   background-color: #83B3D3;
@@ -1076,7 +1095,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
+  font-weight: 400;
   background-color: #333333;
+  box-shadow: 0px 15px 30px 0px #0000004D;
   border-radius: 10px;
 }
 

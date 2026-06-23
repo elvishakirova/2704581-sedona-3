@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <header class="page-header">
+  <header class="page-header" data-test="header">
     <nav class="navigation">
       <a class="nav-logo" href="index.html">
         <img class="navigation-item-image" src="images/logo.svg" width="140" height="70" alt="Логотип города">
@@ -55,8 +55,8 @@
     </nav>
   </header>
 
-  <main class="main-inner main-container-catalog">
-    <div class="catalog-hero">
+  <main class="main-inner main-container-catalog" data-test="main">
+    <div class="catalog-hero" data-test="hero">
       <header class="inner-header">
         <h1 class="inner-header-title">Гостиницы Седоны</h1>
         <ul class="breadcrumbs">
@@ -79,7 +79,7 @@
 
       <section class="catalog-products">
         <h2 class="visually-hidden">Список фильтров гостиниц Седоны</h2>
-        <form class="catalog-filters" action="https://echo.htmlacademy.ru/" method="get">
+        <form class="catalog-filters" action="https://echo.htmlacademy.ru/" method="get" data-test="filter">
           <div class="catalog-filter-left-group">
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Инфраструктура:</legend>
@@ -156,10 +156,10 @@
                 <li class="catalog-filter-item-range">
                   <div class="range-scale">
                     <div class="range-bar" style="width: 226px">
-                      <button class="range-toggle toggle-min">
+                      <button class="range-toggle toggle-min" type="button">
                         <span class="visually-hidden">Изменить минимальную цену</span>
                       </button>
-                      <button class="range-toggle toggle-max">
+                      <button class="range-toggle toggle-max" type="button">
                         <span class="visually-hidden">Изменить максимальную цену</span>
                       </button>
                     </div>
@@ -177,7 +177,7 @@
       </section>
     </div>
 
-    <section class="catalog">
+    <section class="catalog" data-test="catalog">
       <div class="filters-section">
         <h2 class="catalog-header section-title">Найдено гостиниц:
           <span class="catalog-header section-title"> 38</span>
@@ -367,7 +367,7 @@
       </ul>
     </section>
 
-    <section class="subscription-background-black">
+    <section class="subscription-background-black" data-test="subscribe">
       <h2 class="subscription-title-black section-title">Подпишитесь на рассылку</h2>
       <p class="subscription-description-black">Только полезная информация и никакого спама<br>честное бойскаутское!</p>
       <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -378,7 +378,7 @@
 
   </main>
 
-  <footer class="page-footer">
+  <footer class="page-footer" data-test="footer">
     <div class="socials">
       <h2 class="visually-hidden">Социальные сети</h2>
       <ul class="footer-social-list">
