@@ -1340,7 +1340,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .sorting-select:active {
-  color: #0000004D;
+  color: #000000;
   border: 2px solid #0000004D;
 }
 
@@ -1467,6 +1467,10 @@ input[type="number"]::-webkit-inner-spin-button {
   background-color: #E5E5E5;
   outline: #83B3D3 3px solid;
   outline-offset: -3px;
+}
+
+.control-input:active {
+  background-color: #F2F2F2;
 }
 
 .control-input:disabled {
